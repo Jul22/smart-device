@@ -1,0 +1,23 @@
+.btn {
+  display: block;
+  min-width: 180px;
+  font-family: $roboto-condensed;
+  font-weight: bold;
+  color: $white;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
