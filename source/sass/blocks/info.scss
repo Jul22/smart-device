@@ -51,6 +51,7 @@
   .info__container {
     padding-top: 28px;
     padding-left: 248px;
+    padding-bottom: 85px;
     background-image: url("../img/year-numbers-tablet.png");
     background-repeat: no-repeat;
 
@@ -90,8 +91,8 @@
 @media (max-width: $mobile) {
   .info__container {
     background-image: none;
-    padding: 0 15px;
-    padding-top: 35px;
+    padding: 35px 0 67px 0;
+    width: 85%;
   }
 
   .info h2 {
