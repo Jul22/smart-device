@@ -1,0 +1,44 @@
+.accordion {
+  position: relative;
+}
+
+.accordion h3 {
+  margin: 0 0 25px;
+  font-family: $roboto-condensed;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.accordion__btn {
+  display: none;
+}
+
+@media (max-width: $mobile) {
+  .accordion__btn {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 18px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icon-plus.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+
+    &:hover,
+    &focus {
+      opacity: 0.6;
+    }
+  }
+
+  .accordion__btn--opened {
+    background-image: url("../img/icon-minus.svg");
+    background-repeat: no-repeat;
+  }
+}
