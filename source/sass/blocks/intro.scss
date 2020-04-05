@@ -1,22 +1,18 @@
 .intro {
-  position: relative;
   color: $white;
 }
 
 .intro__wrapper {
   position: relative;
-  width: 90%;
   margin: 0 auto;
-  height: 100%;
-  padding-left: 15px;
-  padding-bottom: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: 198px 15px 90px;
 }
 
-.intro__title {
+.intro h2 {
   margin-top: 0;
   margin-bottom: 30px;
-  padding-top: 230px;
-  width: 63%;
   font-family: $roboto-condensed;
   font-weight: bold;
   font-size: 80px;
@@ -26,7 +22,8 @@
   text-transform: uppercase;
 }
 
-.intro__text {
+.intro p {
+  margin-top: 0;
   margin-bottom: 45px;
   width: 52%;
   padding-left: 98px;
@@ -52,6 +49,7 @@
 .intro__button {
   max-width: 407px;
   margin-left: 95px;
+  margin-bottom: 173px;
   padding: 17px 28px 14px;
   font-size: 16px;
   line-height: 19px;
@@ -65,10 +63,10 @@
 }
 
 .intro__button-scroll {
-  position: absolute;
+  position: relative;
   display: block;
-  bottom: 126px;
-  left: -22px;
+  transform-origin: left bottom;
+  margin-left: 18px;
   font-size: 14px;
   line-height: 16px;
   opacity: 0.5;
@@ -89,18 +87,18 @@
 
 @media (max-width: $tablet) {
   .intro__wrapper {
-    padding-left: 80px;
-    padding-bottom: 163px;
+    padding-top: 97px;
+    padding-left: 85px;
+    padding-bottom: 112px;
   }
 
-  .intro__title {
+  .intro h2 {
     width: 50%;
     font-size: 60px;
     line-height: 70px;
-    padding-top: 116px;
   }
 
-  .intro__text {
+  .intro p {
     font-size: 18px;
     line-height: 28px;
     padding-left: 50px;
@@ -117,6 +115,7 @@
   .intro__button {
     max-width: 379px;
     margin-left: 53px;
+    margin-bottom: 50px;
     padding: 17px 14px 14px 14px;
     line-height: 19px;
     min-height: 55px;
@@ -131,17 +130,17 @@
 
 @media (max-width: $mobile) {
   .intro__wrapper {
-    padding: 115px 0 70px;
+    padding: 215px 10px 70px 15px;
   }
 
-  .intro__title {
+  .intro h2 {
     width: 100%;
     font-size: 40px;
     line-height: 47px;
     margin-bottom: 27px;
   }
 
-  .intro__text {
+  .intro p {
     width: 100%;
     font-size: 16px;
     line-height: 25px;
@@ -151,7 +150,7 @@
   .intro__button {
     display: block;
     margin: 0 auto;
-    max-width: 287px;
+    min-width: 287px;
 
     &--mobile {
       display: block;

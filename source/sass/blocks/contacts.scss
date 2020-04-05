@@ -5,7 +5,7 @@
   background-image: url("../img/blue-bg.png");
   background-repeat: no-repeat;
   background-position: left 50px, top -60px;
-  padding: 95px 40px;
+  padding: 93px 40px;
 }
 
 .contacts__container {
@@ -22,7 +22,7 @@
 }
 
 
-.contacts__wrapper  form {
+.contacts__wrapper form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -41,25 +41,23 @@
   color: $white;
 }
 
-.contacts [type="text"],
-.contacts [type="tel"] {
-  width: 47%;
-}
-
 @media (max-width: $tablet) {
   .contacts {
-    background-image: none;
     min-height: 662px;
-    padding-top: 75px;
+    padding-top: 77px;
+  }
+
+  .contacts__container {
+    background-image: none;
   }
 
   .contacts h2 {
     font-size: 32px;
+    margin-bottom: 15px;
   }
 
-  .contacts__container {
-    padding-left: 50px;
-    background: none;
+  .contacts p {
+    margin-top: 0;
   }
 
   .contacts__wrapper {
@@ -93,10 +91,5 @@
     form {
       flex-direction: column;
     }
-  }
-
-  .contacts [type="text"],
-  .contacts [type = "tel"] {
-    width: 100%;
   }
 }

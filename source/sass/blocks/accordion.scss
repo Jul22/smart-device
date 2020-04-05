@@ -20,8 +20,8 @@
   .accordion__btn {
     display: block;
     position: absolute;
-    top: 22px;
-    right: 18px;
+    top: 27px;
+    right: 2px;
     width: 30px;
     height: 30px;
     background-image: url("../img/icon-plus.svg");
@@ -40,5 +40,6 @@
   .accordion__btn--opened {
     background-image: url("../img/icon-minus.svg");
     background-repeat: no-repeat;
+    top: 30px;
   }
 }

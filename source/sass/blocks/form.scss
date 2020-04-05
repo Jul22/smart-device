@@ -36,12 +36,20 @@ textarea {
   align-items: center;
 }
 
+[type="text"],
+[type="tel"] {
+  width: 47%;
+}
+
 [type="checkbox"] + label {
   position: relative;
   display: inline-block;
   padding-left: 30px;
   color: $white;
   cursor: pointer;
+  width: 45%;
+  font-size: 14px;
+  line-height: 16px;
 
   &:hover,
   &:focus {
@@ -83,6 +91,15 @@ textarea {
     margin-bottom: 48px;
     min-height: 164px;
   }
+
+  [type="checkbox"] + label {
+    padding-left: 37px;
+
+    &::before {
+      top: 9px;
+      left: -8px;
+    }
+  }
 }
 
 // Mobile
@@ -103,5 +120,14 @@ textarea {
 
   .form__submit {
     flex-direction: column;
+  }
+
+  [type="text"],
+  [type="tel"] {
+    width: 100%;
+  }
+
+  [type="checkbox"] + label {
+    width: 100%;
   }
 }

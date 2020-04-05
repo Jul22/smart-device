@@ -3,14 +3,15 @@
 }
 
 .advantages__list {
-  @include list-reset();
+  padding-left: 0;
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .advantages__item {
-  width: 49%;
+  width: calc(50% - 15px);
   min-height: 299px;
   padding: 39px 43px 49px;
   margin-bottom: 30px;
@@ -59,10 +60,6 @@
     padding: 54px 25px 0 25px;
   }
 
-  .advantages__list {
-    padding: 0 35px;
-  }
-
   .advantages__item {
     width: 48%;
     min-height: 232px;
@@ -87,8 +84,8 @@
   }
 
   .advantages__list {
-    width: 85%;
-    padding: 0;
+    width: 100%;
+    padding: 0 16px 0 14px;
     margin: 0 auto;
     flex-direction: column;
   }

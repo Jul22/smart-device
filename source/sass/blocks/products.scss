@@ -20,16 +20,11 @@
 }
 
 .products__item {
-  width: 32%;
+  width: calc(33% - 15px);
   height: 620px;
   margin-bottom: 30px;
-}
-
-.products__link {
   position: relative;
   display: block;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 
   &:hover,
@@ -42,9 +37,9 @@
     position: sticky;
     content: "";
     display: block;
-    left: 100%;
-    bottom: 0;
-    background-image: url("../../img/icon-move.svg");
+    left: 83%;
+    top: 90%;
+    background-image: url("../img/sprite_auto.svg#icon-move-view");
     background-repeat: no-repeat;
     background-size: auto;
     background-color: $blue;
@@ -53,35 +48,58 @@
   }
 }
 
-.products__image {
-  position: relative;
-  opacity: 0.2;
-  width: 100%;
-  height: 100%;
+.products__item--first {
+  background-image: url("../img/offer-desk-1.png");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/offer-desk-1@2x.png");
+    background-size: 370px 620px;
+  }
 }
 
-.products__link h3 {
+.products__item--second {
+  background-image: url("../img/offer-desk-2.png");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/offer-desk-2@2x.png");
+    background-size: 370px 620px;
+  }
+}
+
+.products__item--third {
+  background-image: url("../img/offer-desk-3.png");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/offer-desk-3@2x.png");
+    background-size: 370px 620px;
+  }
+}
+
+
+.products__item h3 {
   margin: 0;
   position: absolute;
-  top: 50px;
-  left: 44px;
   font-family: $roboto-condensed;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   color: $white;
-  max-width: 45%;
+  max-width: 64%;
+  padding: 50px 30px 187px 45px;
 }
 
 // Tablet
 
 @media (max-width: $tablet) {
   .products {
-    padding: 50px 30px 0;
+    padding: 50px 0 0;
   }
 
   .products__wrapper {
-    padding: 50px 32px 30px;
+    padding: 50px 25px 30px;
   }
 
   .products h2 {
@@ -89,7 +107,7 @@
     line-height: 45px;
     max-width: 85%;
     margin-bottom: 0;
-    padding-left: 30px;
+    padding-left: 25px;
   }
 
   .products__list {
@@ -101,18 +119,46 @@
     height: 256px;
     margin-right: 0;
     margin-bottom: 46px;
+
+    &::after {
+      top: 100%;
+      left: 75%;
+    }
   }
 
-  .products__link h3 {
-    max-width: 25%;
-    top: 40px;
-    left: 40px;
+  .products__item--first {
+    background-image: url("../img/offer-tablet-1.png");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/offer-tablet-1@2x.png");
+      background-size: cover;
+    }
   }
 
-  .products__image {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+  .products__item--second {
+    background-image: url("../img/offer-tablet-2.png");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/offer-tablet-2@2x.png");
+      background-size: cover;
+    }
+  }
+
+  .products__item--third {
+    background-image: url("../img/offer-tablet-3.png");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/offer-tablet-3@2x.png");
+      background-size: cover;
+    }
+  }
+
+  .products__item h3 {
+    max-width: 33%;
+    padding: 38px 4px 98px 46px;
   }
 }
 
@@ -125,14 +171,13 @@
   }
 
   .products__wrapper {
-    padding: 45px 34px 32px;
+    padding: 45px 15px 33px;
   }
 
   .products h2 {
     font-size: 28px;
     line-height: 39px;
     max-width: 95%;
-    padding-left: 40px;
     margin: 0;
   }
 
@@ -140,8 +185,33 @@
     margin-bottom: 30px;
   }
 
-  .products__link-text {
-    top: 20px;
-    left: 35px;
+  .products__item--first {
+    background-image: url("../img/offer-mobile-1.png");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/offer-mobile1@2x.png");
+      background-size: cover;
+    }
+  }
+
+  .products__item--second {
+    background-image: url("../img/offer-mobile-2.png");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/offer-mobile-2@2x.png");
+      background-size: cover;
+    }
+  }
+
+  .products__item--third {
+    background-image: url("../img/offer-mobile3.png");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/offer-mobile-3@2x.png");
+      background-size: cover;
+    }
   }
 }

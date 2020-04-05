@@ -1,0 +1,90 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.5;
+  display: none;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+
+.modal-overlay--close {
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  width: 490px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $blue;
+  padding: 33px 39px 36px;
+  display: none;
+}
+
+.modal h2 {
+  color: $white;
+  font-family: $roboto-condensed;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 39px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  color: $white;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+
+.modal input,
+.modal textarea {
+  margin-bottom: 30px;
+}
+
+.modal textarea {
+  min-height: 104px;
+}
+
+.modal .form__submit {
+  flex-direction: column;
+}
+
+.modal .btn {
+  margin: 0 0 30px 0;
+  width: 100%;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  font-size: 0;
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.modal--open {
+  display: block;
+}

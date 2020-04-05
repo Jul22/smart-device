@@ -1,6 +1,7 @@
 .social {
   margin-right: 145px;
 }
+
 .social__list {
   @include list-reset;
   display: flex;
@@ -35,31 +36,35 @@
 }
 
 @media (max-width: $tablet) {
- .social {
-   margin-right: 0;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   border-bottom: 1px solid rgba(98, 105, 98, 0.2);
-   width: 100%;
- }
+  .social {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+    width: 100%;
+  }
 
- .social__logo {
-   margin-bottom: 0;
-   padding: 0 25px 25px;
- }
+  .social__logo {
+    margin-bottom: 0;
+    padding: 0 25px 22px;
+  }
+
+  .social p {
+    margin: -19px 0 0 -13px;
+  }
 
   .social__item {
     margin-right: 14px;
   }
 
- .copyright-text {
-   display: block;
-   margin: 0;
-   letter-spacing: 0.04em;
-   font-size: 13px;
-   line-height: 24px;
- }
+  .copyright-text {
+    display: block;
+    margin: 0;
+    letter-spacing: 0.04em;
+    font-size: 13px;
+    line-height: 24px;
+  }
 }
 
 // Mobile
@@ -67,15 +72,15 @@
 @media (max-width: $mobile) {
   .social {
     flex-direction: column;
-    padding: 32px 0 51px 0;
+    padding: 27px 0 50px;
   }
 
   .social__logo {
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
-  .copyright-text {
+  .social p {
     margin-bottom: 32px;
   }
 }

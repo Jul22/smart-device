@@ -1,4 +1,4 @@
-.header {
+.header-wrapper {
   background-color: #1b2d37;
   background-image:
     url("../img/plata-desktop@1x.png"),
@@ -16,53 +16,33 @@
   }
 }
 
-.header__container {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
   margin: 0 auto;
-  padding: 33px 20px 0 18px;
+  padding: 33px 20px 33px 18px;
 }
 
 .header__logo {
-  &--desk {
-    display: block;
-    width: 202px;
-    height: 52px;
+  display: block;
+  width: 202px;
+  height: 52px;
+  margin-right: auto;
 
-    &:hover,
-    &focus {
-      opacity: 0.5;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+  &:hover,
+  &focus {
+    opacity: 0.5;
   }
 
-  &--mobile {
-    display: none;
+  &:active {
+    opacity: 0.3;
   }
 }
-
-.header__list {
-  @include list-reset;
-  display: flex;
-  align-items: center;
-}
-
-.header__item {
-  margin-right: 88px;
-
-  & + & {
-    margin-right: 0;
-  }
-}
-
 
 .header__link {
   color: $white;
+  margin-left: 88px;
 
   &:hover,
   &focus {
@@ -90,6 +70,7 @@
 // Tablet width
 @media (max-width: $tablet) {
   .header {
+    padding: 20px 23px 20px;
     background-image:
       url("../img/plata-desktop@1x.png"),
       url("../img/triangle-tablet-bg@1x.png");
@@ -107,21 +88,14 @@
     }
   }
 
-  .header__container {
-    padding: 20px 18px 0;
+  .header__link {
+    margin: 0;
   }
 
-  .header__list {
-    margin-right: 0;
-  }
-
-  .header__list span {
+  .header__link span {
     display: none;
   }
 
-  .header__item {
-    margin-right: 0;
-  }
 
   .header__icon--envelope {
     width: 25px;
@@ -144,7 +118,7 @@
 // Mobile width
 
 @media (max-width: $mobile) {
-  .header {
+  .header-wrapper {
     background-image:
       url("../img/plata-mobile@1x.png"),
       url("../img/triangle-mobile-bg@1x.png");
@@ -162,25 +136,14 @@
     }
   }
 
-  .header__container {
-    padding: 0;
-    padding-top: 17px;
+  .header {
+    padding: 17px 15px 17px;
   }
 
   .header__logo {
-    &--desk {
-      display: none;
-    }
-
-    &--mobile {
-      display: block;
-      width: 38px;
-      height: 38px;
-    }
-  }
-
-  .header__list {
-    margin-right: 0;
+    display: block;
+    width: 38px;
+    height: 38px;
   }
 
   .header__icon--envelope {

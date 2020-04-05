@@ -50,7 +50,7 @@
 @media (max-width: $tablet) {
   .info__container {
     padding-top: 28px;
-    padding-left: 248px;
+    padding-left: 212px;
     padding-bottom: 85px;
     background-image: url("../img/year-numbers-tablet.png");
     background-repeat: no-repeat;
@@ -59,7 +59,7 @@
       background-image: url("../img/year-numbers-tablet@2x.png");
       background-repeat: no-repeat;
       background-size: 245px auto;
-      background-position: 35px 25px;
+      background-position: 0 25px;
     }
   }
 
@@ -72,7 +72,7 @@
     max-width: 90%;
 
     &:last-of-type {
-      margin-bottom: 43px;
+      margin-bottom: 22px;
     }
   }
 
@@ -91,8 +91,8 @@
 @media (max-width: $mobile) {
   .info__container {
     background-image: none;
-    padding: 35px 0 67px 0;
-    width: 85%;
+    width: 100%;
+    padding: 35px 16px 65px 14px;
   }
 
   .info h2 {
