@@ -39,7 +39,7 @@
     display: block;
     left: 83%;
     top: 90%;
-    background-image: url("../img/sprite_auto.svg#icon-move-view");
+    background-image:  url("../img/icon-move.svg");
     background-repeat: no-repeat;
     background-size: auto;
     background-color: $blue;
@@ -119,10 +119,11 @@
     height: 256px;
     margin-right: 0;
     margin-bottom: 46px;
+    background-size: cover;
 
     &::after {
       top: 100%;
-      left: 75%;
+      left: 100%;
     }
   }
 
@@ -183,6 +184,7 @@
 
   .products__item {
     margin-bottom: 30px;
+    background-size: cover;
   }
 
   .products__item--first {

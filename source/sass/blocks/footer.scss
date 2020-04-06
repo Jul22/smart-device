@@ -1,5 +1,6 @@
 .footer {
   background-color: $footer-background;
+  flex-shrink: 0;
 }
 
 .footer__container {

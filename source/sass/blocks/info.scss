@@ -54,6 +54,7 @@
     padding-bottom: 85px;
     background-image: url("../img/year-numbers-tablet.png");
     background-repeat: no-repeat;
+    background-position: 0 25px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/year-numbers-tablet@2x.png");

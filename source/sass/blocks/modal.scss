@@ -72,7 +72,7 @@
   right: 20px;
   width: 17px;
   height: 17px;
-  background-image: url("../img/icon-close.svg");
+  background-image: url('sprite_auto.svg#icon-fowrard');
   background-repeat: no-repeat;
   background-color: transparent;
   font-size: 0;
@@ -87,4 +87,12 @@
 
 .modal--open {
   display: block;
+}
+
+.modal label {
+  width: 100%;
+}
+
+.modal input[type=checkbox] {
+  left: 3px;
 }

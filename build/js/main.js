@@ -1,6 +1,6 @@
 'use strict';
 var KEYCODE = 27;
-var accordions = document.getElementsByClassName("accordion__btn");
+var accordions = document.getElementsByClassName('accordion__btn');
 var modalContacts = document.querySelector('.modal');
 var contactsToggle = document.querySelector('.header__btn');
 var modalCloseBtn = document.querySelector('.modal__close-btn');
@@ -9,18 +9,17 @@ var overlay = document.querySelector('.modal-overlay');
 var body = document.querySelector('body');
 
 
-
 // Открытие/Закрытие аккордиона
 
 for (var i = 0; i < accordions.length; i++) {
+
   accordions[i].onclick = function() {
     this.classList.toggle('accordion__btn--opened');
-
     var content = this.nextElementSibling;
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.maxHeight = content.scrollHeight + 'px';
     }
   }
 }
@@ -38,6 +37,7 @@ var openModal = function() {
   modalContacts.style.display = 'block';
   overlay.style.display='block';
   body.classList.add('overflow');
+
   nameField.focus();
 
 };
@@ -65,4 +65,3 @@ window.addEventListener('keydown', function (evt) {
 
 IMask(document.querySelector('#phone'), {mask: '+{7}(000)000-00-00'});
 IMask(document.querySelector('#phone-modal'), {mask: '+{7}(000)000-00-00'});
-

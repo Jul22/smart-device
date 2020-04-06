@@ -2,7 +2,8 @@
   margin-top: 52px;
 }
 
-input,
+[type= "text"],
+[type= "tel"],
 textarea {
   width: 100%;
   margin-bottom: 40px;
@@ -22,12 +23,12 @@ textarea {
   }
 }
 
-input {
+input:not([type="checkbox"]) {
   height: 50px;
 }
 
 textarea {
-  min-height: 154px;
+  min-height: 158px;
   resize: none;
 }
 
@@ -38,51 +39,52 @@ textarea {
 
 [type="text"],
 [type="tel"] {
-  width: 47%;
+  width: calc(50% - 15px);
 }
 
-[type="checkbox"] + label {
-  position: relative;
+label {
   display: inline-block;
-  padding-left: 30px;
-  color: $white;
-  cursor: pointer;
-  width: 45%;
+  color: rgba(255,255,255,.8);
   font-size: 14px;
   line-height: 16px;
-
-  &:hover,
-  &:focus {
-    opacity: 0.5;
-  }
+  padding-left: 30px;
+  position: relative;
+  width: 45%;
+  align-self: center;
 }
 
-[type="checkbox"] + label::before {
-  content: "";
+input[type="checkbox"] {
+  cursor: pointer;
+  padding: 0;
   position: absolute;
-  top: 4px;
-  left: 0;
-  display: block;
+  left: -4px;
+}
+input[type="checkbox"]:before {
+  content: "";
+  display: inline-block;
+  margin-top: 0px;
   width: 16px;
   height: 16px;
-  border: 1px solid $white;
+  background: $blue;
+  border: 1px solid rgba(255,255,255, 0.8);
+  border-radius: 2px;
 }
 
-[type="checkbox"] + label::after {
+input[type="checkbox"]:checked:before {
+  background: $blue;
+  border-color: $white;
+}
+
+input[type="checkbox"]:checked:after {
   content: "";
   position: absolute;
-  top: 9px;
-  left: 4px;
-  display: none;
-  width: 8px;
-  height: 5px;
-  background-image: url("../img/icon-check.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-[type="checkbox"]:checked + label::after {
-  display: block;
+  left: 3px;
+  top: 7px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
 }
 
 // Tablet
@@ -127,7 +129,7 @@ textarea {
     width: 100%;
   }
 
-  [type="checkbox"] + label {
+  label {
     width: 100%;
   }
 }
