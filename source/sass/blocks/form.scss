@@ -2,8 +2,8 @@
   margin-top: 52px;
 }
 
-[type= "text"],
-[type= "tel"],
+label [type= "text"],
+label [type= "tel"],
 textarea {
   width: 100%;
   margin-bottom: 40px;
@@ -11,7 +11,11 @@ textarea {
   border: none;
   border-radius: 0;
   background-color: #19baff;
+  outline: none;
   color: $white;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $pt-mono;
 
   &:hover,
   &:focus {
@@ -20,6 +24,7 @@ textarea {
 
   &::placeholder {
     color: $white;
+    opacity: 1;
   }
 }
 
@@ -30,61 +35,78 @@ input:not([type="checkbox"]) {
 textarea {
   min-height: 158px;
   resize: none;
+  width: 100%;
 }
 
-.form__submit {
-  display: flex;
-  align-items: center;
-}
+button {
+  font-family: $roboto-condensed;
+  width: 270px;
+  min-height: 45px;
+  background: none;
+  border-radius: 5px;
+  color: $white;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: 14px 18px;
+  background: transparent;
+  border: 1px solid $white;
+  cursor: pointer;
 
-[type="text"],
-[type="tel"] {
-  width: calc(50% - 15px);
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
 }
 
 label {
-  display: inline-block;
-  color: rgba(255,255,255,.8);
-  font-size: 14px;
-  line-height: 16px;
-  padding-left: 30px;
-  position: relative;
-  width: 45%;
-  align-self: center;
-}
-
-input[type="checkbox"] {
   cursor: pointer;
-  padding: 0;
-  position: absolute;
-  left: -4px;
-}
-input[type="checkbox"]:before {
-  content: "";
-  display: inline-block;
-  margin-top: 0px;
-  width: 16px;
-  height: 16px;
-  background: $blue;
-  border: 1px solid rgba(255,255,255, 0.8);
-  border-radius: 2px;
-}
+  width: calc(50% - 15px);
 
-input[type="checkbox"]:checked:before {
-  background: $blue;
-  border-color: $white;
-}
+  &:hover span,
+  &:focus-within span {
+    opacity: 1;
+  }
 
-input[type="checkbox"]:checked:after {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 7px;
-  background: white;
-  width: 2px;
-  height: 2px;
-  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
-  transform: rotate(45deg);
+  &:active span {
+    opacity: 0.5;
+  }
+
+  span {
+    font-family: $pt-mono;
+    position: relative;
+    display: block;
+    margin-left: 11px;
+    padding-top: 7px;
+    padding-left: 32px;
+    width: 230px;
+    opacity: 0.8;
+    color: $white;
+    font-size: 14px;
+    line-height: 16px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $white;
+    }
+  }
+
+  input:checked + span::before {
+    background-image: url("../../img/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 // Tablet
@@ -94,12 +116,16 @@ input[type="checkbox"]:checked:after {
     min-height: 164px;
   }
 
-  [type="checkbox"] + label {
-    padding-left: 37px;
+  button {
+    min-width: 280px;
+    margin: 0;
+  }
+
+  label  span {
+    width: 240px;
 
     &::before {
-      top: 9px;
-      left: -8px;
+      top: 12px;
     }
   }
 }
@@ -127,6 +153,12 @@ input[type="checkbox"]:checked:after {
   [type="text"],
   [type="tel"] {
     width: 100%;
+  }
+
+  button {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 28px;
   }
 
   label {
