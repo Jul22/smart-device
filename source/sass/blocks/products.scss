@@ -34,17 +34,18 @@
   }
 
   &::after {
-    position: sticky;
+    position: absolute;
     content: "";
     display: block;
-    left: 83%;
-    top: 90%;
+    right: 0;
+    bottom: 0;
     background-image: url("../img/icon-move.svg");
     background-repeat: no-repeat;
     background-size: auto;
     background-color: $blue;
     width: 63px;
     height: 63px;
+    z-index: 2;
   }
 }
 
@@ -119,11 +120,6 @@
     margin-right: 0;
     margin-bottom: 46px;
     background-size: cover;
-
-    &::after {
-      top: 100%;
-      left: 100%;
-    }
   }
 
   .products__item--first {
