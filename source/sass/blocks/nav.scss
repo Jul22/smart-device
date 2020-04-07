@@ -1,6 +1,7 @@
 .nav__list {
   @include list-reset;
   column-count: 2;
+  overflow: hidden;
 
   &--contacts {
     column-count: 1;

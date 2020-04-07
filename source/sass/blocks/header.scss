@@ -69,8 +69,7 @@
 
 // Tablet width
 @media (max-width: $tablet) {
-  .header {
-    padding: 20px 23px 20px;
+  .header-wrapper {
     background-image:
       url("../img/plata-desktop@1x.png"),
       url("../img/triangle-tablet-bg@1x.png");
@@ -86,6 +85,10 @@
       background-position: calc(34% + 420px) 113px, center top;
       background-size: 465px 340px, cover;
     }
+  }
+
+  .header {
+    padding: 20px 23px 20px;
   }
 
   .header__link {
