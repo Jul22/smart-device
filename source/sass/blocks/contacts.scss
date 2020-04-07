@@ -4,21 +4,21 @@
   background-color: $blue;
   background-image: url("../img/blue-bg.png");
   background-repeat: no-repeat;
-  background-position: left 49px top -60px;
-  padding: 93px 40px;
+  background-position: left -200px top -60px;
+  padding: 90px 40px;
 }
 
 .contacts__container {
   background-image: url("../img/paper_airplane.png");
-  background-position: left 118px top 70px;
+  background-position: left 110px top 70px;
   background-repeat: no-repeat;
   background-size: 511px 288px;
 }
 
 .contacts__wrapper {
-  max-width: 566px;
+  max-width: 576px;
   margin-left: auto;
-  margin-right: 144px;
+  margin-right: 130px;
 }
 
 
@@ -29,7 +29,7 @@
 }
 
 .contacts h2 {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   font-family: $roboto-condensed;
   font-size: 36px;
   line-height: 51px;
@@ -40,12 +40,13 @@
 .contacts p {
   margin: 0;
   color: $white;
+  line-height: 22px;
 }
 
 @media (max-width: $tablet) {
   .contacts {
     min-height: 662px;
-    padding: 75px 74px 34px 88px;
+    padding: 80px 85px 103px 90px;
     background-image: none;
   }
 
@@ -55,7 +56,7 @@
 
   .contacts h2 {
     font-size: 32px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   .contacts p {
@@ -74,12 +75,14 @@
 @media (max-width: $mobile) {
   .contacts {
     min-height: 640px;
-    padding: 33px 0 39px;
+    padding: 31px 0 39px;
   }
 
   .contacts h2 {
     font-size: 27px;
     line-height: 39px;
+    letter-spacing: 0.02em;
+    margin-bottom: 15px;
   }
 
   .contacts__container {

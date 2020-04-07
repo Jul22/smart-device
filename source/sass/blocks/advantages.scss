@@ -57,13 +57,12 @@
 
 @media (max-width: $tablet) {
   .advantages {
-    padding: 54px 25px 0 25px;
+    padding: 57px 25px 0 25px;
   }
 
   .advantages__item {
-    width: 48%;
     min-height: 232px;
-    padding: 25px 19px 20px 27px;
+    padding: 25px 19px 20px 25px;
     border-left: 2px solid $blue;
   }
 

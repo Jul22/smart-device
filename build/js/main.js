@@ -7,7 +7,14 @@ var modalCloseBtn = document.querySelector('.modal__close-btn');
 var nameField = document.querySelector('.modal [type="text"]');
 var overlay = document.querySelector('.modal-overlay');
 var body = document.querySelector('body');
-
+var contactsForm = document.querySelector('#contacts .form');
+var contactsFormModal = document.querySelector('.modal .form');
+var nameInput = document.querySelector('#name');
+var nameInputModal = document.querySelector('#name-modal');
+var phoneInput = document.querySelector('#phone');
+var phoneInputModal = document.querySelector('#phone-modal');
+var messageInput = document.querySelector('#message');
+var messageInputModal = document.querySelector('#message-modal');
 
 // Открытие/Закрытие аккордиона
 
@@ -65,3 +72,23 @@ window.addEventListener('keydown', function (evt) {
 
 IMask(document.querySelector('#phone'), {mask: '+{7}(000)000-00-00'});
 IMask(document.querySelector('#phone-modal'), {mask: '+{7}(000)000-00-00'});
+
+if (contactsForm) {
+  contactsForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    localStorage.setItem('name-field', nameInput.value);
+    localStorage.setItem('phone-field', phoneInput.value);
+    localStorage.setItem('message-field', messageInput.value);
+  });
+}
+
+if (contactsFormModal) {
+  contactsFormModal.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    localStorage.setItem('name-modal', nameInputModal.value);
+    localStorage.setItem('phone-modal', phoneInputModal.value);
+    localStorage.setItem('message-modal', messageInputModal.value);
+  });
+}

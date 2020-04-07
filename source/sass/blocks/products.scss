@@ -39,7 +39,7 @@
     display: block;
     left: 83%;
     top: 90%;
-    background-image:  url("../img/icon-move.svg");
+    background-image: url("../img/icon-move.svg");
     background-repeat: no-repeat;
     background-size: auto;
     background-color: $blue;
@@ -87,8 +87,7 @@
   font-size: 20px;
   line-height: 30px;
   color: $white;
-  max-width: 64%;
-  padding: 50px 30px 187px 45px;
+  padding: 51px 160px 0 45px;
 }
 
 // Tablet
@@ -158,8 +157,8 @@
   }
 
   .products__item h3 {
-    max-width: 33%;
-    padding: 38px 4px 98px 46px;
+    padding: 38px 220px 0 46px;
+    width: 60%;
   }
 }
 
@@ -172,7 +171,7 @@
   }
 
   .products__wrapper {
-    padding: 45px 15px 33px;
+    padding: 42px 15px 33px;
   }
 
   .products h2 {
@@ -185,6 +184,11 @@
   .products__item {
     margin-bottom: 30px;
     background-size: cover;
+  }
+
+  .products__item h3 {
+    width: 100%;
+    padding: 20px 90px 10px 36px;
   }
 
   .products__item--first {
