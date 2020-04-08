@@ -64,9 +64,9 @@ var closeModal = function f() {
 };
 
 
-var openModal = function() {
+var openModal = function () {
   modalContacts.style.display = 'block';
-  overlay.style.display='block';
+  overlay.style.display = 'block';
   body.classList.add('overflow');
 
   nameField.focus();
