@@ -23,6 +23,7 @@
   width: calc(33% - 15px);
   height: 620px;
   margin-bottom: 30px;
+  padding: 50px 7px 5px 45px;
   position: relative;
   display: block;
   overflow: hidden;
@@ -76,13 +77,12 @@
 
 .products__item h3 {
   margin: 0;
-  position: absolute;
+  width: 50%;
   font-family: $roboto-condensed;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   color: $white;
-  padding: 51px 160px 0 45px;
 }
 
 // Tablet
@@ -113,6 +113,7 @@
     height: 256px;
     margin-right: 0;
     margin-bottom: 46px;
+    padding-top: 40px;
     background-size: cover;
   }
 
@@ -147,8 +148,7 @@
   }
 
   .products__item h3 {
-    padding: 38px 220px 0 46px;
-    width: 60%;
+    width: 25%;
   }
 }
 
@@ -173,12 +173,13 @@
 
   .products__item {
     margin-bottom: 30px;
+    padding-top: 20px;
+    padding-left: 35px;
     background-size: cover;
   }
 
   .products__item h3 {
-    width: 100%;
-    padding: 20px 90px 10px 36px;
+    width: 65%;
   }
 
   .products__item--first {
