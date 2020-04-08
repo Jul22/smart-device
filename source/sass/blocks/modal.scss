@@ -45,7 +45,11 @@
   color: $white;
   font-size: 16px;
   line-height: 22px;
-  margin-bottom: 30px;
+  margin: 0;
+}
+
+.modal .form {
+  margin-top: 30px;
 }
 
 .modal input,
@@ -62,7 +66,7 @@
 }
 
 .modal button {
-  margin: 0 0 30px 0;
+  margin: 0 0 35px 0;
   width: 100%;
 }
 
@@ -79,6 +83,7 @@
   font-size: 0;
   cursor: pointer;
   border: none;
+  padding: 0;
 
   &:hover,
   &:focus {
@@ -96,4 +101,7 @@
 
 .modal label span {
   width: 95%;
+  padding-top: 0;
+  margin-left: 0;
+  padding-left: 50px;
 }

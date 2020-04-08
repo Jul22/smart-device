@@ -1,6 +1,5 @@
 'use strict';
 var KEYCODE = 27;
-var accordions = document.getElementsByClassName('accordion__btn');
 var modalContacts = document.querySelector('.modal');
 var contactsToggle = document.querySelector('.header__btn');
 var modalCloseBtn = document.querySelector('.modal__close-btn');
@@ -15,21 +14,46 @@ var phoneInput = document.querySelector('#phone');
 var phoneInputModal = document.querySelector('#phone-modal');
 var messageInput = document.querySelector('#message');
 var messageInputModal = document.querySelector('#message-modal');
+var site = document.querySelector('.accordion-site');
+var siteButton = document.querySelector('.accordion__btn--site');
+var office = document.querySelector('.accordion-office');
+var officeButton = document.querySelector('.accordion__btn--office');
+var aboutSiteTitle = document.querySelector('.accordion-site h3');
+var aboutOfficeTitle = document.querySelector('.accordion-office h3');
 
 // Открытие/Закрытие аккордиона
-
-for (var i = 0; i < accordions.length; i++) {
-
-  accordions[i].onclick = function() {
-    this.classList.toggle('accordion__btn--opened');
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + 'px';
+var showSiteMenu = function () {
+  if (site.classList.contains('accordion-site--closed')) {
+    if (office.classList.contains('accordion-office--opened')) {
+      office.classList.add('accordion-office--closed');
+      office.classList.remove('accordion-office--opened');
     }
+    site.classList.remove('accordion-site--closed');
+    site.classList.add('accordion-site--opened');
+  } else {
+    site.classList.add('accordion-site--closed');
+    site.classList.remove('accordion-site--opened');
   }
-}
+};
+
+var showSiteOffice = function () {
+  if (office.classList.contains('accordion-office--closed')) {
+    if (site.classList.contains('accordion-site--opened')) {
+      site.classList.add('accordion-site--closed');
+      site.classList.remove('accordion-site--opened');
+    }
+    office.classList.remove('accordion-office--closed');
+    office.classList.add('accordion-office--opened');
+  } else {
+    office.classList.add('accordion-office--closed');
+    office.classList.remove('accordion-office--opened');
+  }
+};
+
+siteButton.addEventListener('click', showSiteMenu);
+officeButton.addEventListener('click', showSiteOffice);
+aboutSiteTitle.addEventListener('click', showSiteMenu);
+aboutOfficeTitle.addEventListener('click', showSiteOffice);
 
 // Модальное окно
 

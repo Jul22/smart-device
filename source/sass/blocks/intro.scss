@@ -149,8 +149,8 @@
 
   .intro__button {
     display: block;
-    margin: 0 auto;
-    min-width: 287px;
+    margin: 0;
+    max-width: 287px;
 
     &--mobile {
       display: block;

@@ -2,22 +2,16 @@
   position: relative;
   min-height: 670px;
   background-color: $blue;
-  background-image: url("../img/blue-bg.png");
+  background-image: url("../img/paper_airplane.png"), url("../img/blue-bg.png");
+  background-size: auto;
   background-repeat: no-repeat;
-  background-position: left -200px top -60px;
+  background-position: calc(44% - 295px) 160px, left -200px top -60px;
   padding: 90px 40px;
-}
-
-.contacts__container {
-  background-image: url("../img/paper_airplane.png");
-  background-position: left 110px top 70px;
-  background-repeat: no-repeat;
-  background-size: 511px 288px;
 }
 
 .contacts__wrapper {
   max-width: 576px;
-  margin-left: auto;
+  margin-left: 51%;
   margin-right: 130px;
 }
 

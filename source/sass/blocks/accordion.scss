@@ -3,7 +3,7 @@
 }
 
 .accordion h3 {
-  margin: 0 0 23px;
+  margin: 0 0 25px;
   font-family: $roboto-condensed;
   font-size: 15px;
   font-weight: normal;
@@ -17,11 +17,12 @@
 }
 
 @media (max-width: $mobile) {
-  .accordion__btn {
+  .accordion__btn--site,
+  .accordion__btn--office {
     display: block;
     position: absolute;
     top: 27px;
-    right: -249px;
+    right: 2px;
     width: 30px;
     height: 30px;
     background-image: url("../img/icon-plus.svg");
@@ -37,11 +38,18 @@
     }
   }
 
-  .accordion h3 {
-    margin: 0 0 26px;
+  .accordion-site--closed .accordion__list-site,
+  .accordion-office--closed .accordion__list-office {
+    display: none;
   }
 
-  .accordion__btn--opened {
+  .accordion-site--opened .accordion__list-site,
+  .accordion-office--opened .accordion__list-office {
+    display: block;
+  }
+
+  .accordion-site--opened .accordion__btn--site,
+  .accordion-office--opened .accordion__btn--office {
     background-image: url("../img/icon-minus.svg");
     background-repeat: no-repeat;
     top: 30px;

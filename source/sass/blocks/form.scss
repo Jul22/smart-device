@@ -41,7 +41,7 @@ textarea {
   padding: 10px 18px 19px;
 }
 
-button {
+.form button {
   font-family: $roboto-condensed;
   width: 270px;
   min-height: 45px;
@@ -105,7 +105,7 @@ label {
   }
 
   input:checked + span::before {
-    background-image: url("../../img/icon-check.svg");
+    background-image: url("../img/icon-check.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -127,7 +127,7 @@ label {
     min-height: 160px;
   }
 
-  button {
+  .form button {
     min-width: 280px;
     margin: 0;
   }
@@ -173,9 +173,10 @@ label {
     margin-bottom: 33px;
   }
 
-  button {
+  .form button {
     margin-right: 0;
     width: 100%;
+    min-width: auto;
     margin-bottom: 22px;
   }
 
@@ -186,5 +187,6 @@ label {
   label span {
     margin-left: 0;
     padding-left: 33px;
+    width: 100%;
   }
 }

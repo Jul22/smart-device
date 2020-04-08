@@ -28,7 +28,6 @@
       }
     }
   </style>-->
-  <script src="js/picturefill.min.js"></script>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Roboto-Condensed-Bold.woff2" as="font" crossorigin="anonymous">
@@ -134,7 +133,7 @@
     <div class="header-wrapper">
       <header class="header container">
         <h1 class="visually-hidden">Smart Device - Умные технологии</h1>
-        <a href="/" class="header__logo">
+        <a class="header__logo">
           <picture>
             <source srcset="img/icon-desktoplogo.svg" media="(min-width: 767px)">
             <img src="img/icon-mobilelogo.svg" alt="MDN" width="202" height="52">
@@ -260,7 +259,7 @@
 
       <div class="social">
         <div class="social__logo">
-          <a href="/" class="social__logo-link ">
+          <a class="social__logo-link ">
             <svg class="social__logo-icon" width="219" height="53">
               <use xlink:href="img/sprite_auto.svg#icon-footer_logo"></use>
             </svg>
@@ -292,10 +291,10 @@
         </ul>
       </div>
 
-      <div class="accordion nav">
+      <div class="accordion accordion-site accordion-site--closed nav">
         <h3>Разделы сайта</h3>
-        <button class="nav__btn accordion__btn" type="button"><span class="visually-hidden"></span></button>
-        <ul class="nav__list nav__list">
+        <button class="accordion__btn accordion__btn--site" type="button"><span class="visually-hidden"></span></button>
+        <ul class="nav__list accordion__list-site">
           <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Продукты</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Производство печатных плат</a></li>
@@ -306,10 +305,10 @@
         </ul>
       </div>
 
-      <div class="accordion nav nav--contacts">
+      <div class="accordion accordion-office accordion-office--closed nav nav--contacts">
         <h3>Наш офис</h3>
-        <button class="contacts__btn accordion__btn" type="button"><span class="visually-hidden"></span></button>
-        <ul class="nav__list nav__list--contacts">
+        <button class="accordion__btn accordion__btn--office" type="button"><span class="visually-hidden"></span></button>
+        <ul class="nav__list nav__list--contacts accordion__list-office">
           <li class="nav__item">г. Мытищи, Олимпийский проспект, д.10</li>
           <li class="nav__item"><a class="nav__link" href="tel:+7(495)589-40-50">+7 (495) 589-40-50</a></li>
           <li class="nav__item"><a class="nav__link" href="tel:+7(925)003-87-67">+7 (925) 003-87-67</a></li>
@@ -333,7 +332,7 @@
     <div class="modal__wrapper">
       <button class="modal__close-btn" type="button">Закрыть</button>
       <h2>Закажите звонок</h2>
-      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
       <form action="#" method="GET" class="form modal__form">
         <label for="name-modal">
           <input type="text" id="name-modal" name="name-field" placeholder="Имя" required="">
@@ -343,7 +342,7 @@
         </label>
         <textarea name="message-field" id="message-modal" placeholder="Ваш вопрос"></textarea>
         <label for="message-modal" class="visually-hidden">Ваш вопрос</label>
-        <button type="submit">Задать вопрос</button>
+        <button type="submit">Отправить</button>
         <label>
           <input class="visually-hidden" type="checkbox" checked="">
           <span>Я согласен на обработку персональных данных</span>
@@ -351,9 +350,7 @@
       </form>
     </div>
   </div>
-  <script src="js/svgxuse.min.js" defer=""></script>
-  <script src="https://unpkg.com/imask"></script>
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
-
 </body>
 </html>
