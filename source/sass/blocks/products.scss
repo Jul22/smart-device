@@ -27,7 +27,7 @@
   position: relative;
   display: block;
   overflow: hidden;
-  background-color: #1b2d37;
+  background-color: #27353d;
 
   &:hover,
   &:focus {
@@ -46,11 +46,11 @@
 }
 
 .products__item--first {
-  background-image: url("../img/offer-desk-1.png");
+  background-image: url("../img/offer-desk-1@1x.png");
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/offer-desk-1@2x.png");
+    background-image: url("../img/offer-desk1@2x.png");
     background-size: 370px 620px;
   }
 }
@@ -78,7 +78,7 @@
 
 .products__item h3 {
   margin: 0;
-  width: 50%;
+  width: 60%;
   font-family: $roboto-condensed;
   font-weight: 400;
   font-size: 20px;
@@ -149,7 +149,7 @@
   }
 
   .products__item h3 {
-    width: 25%;
+    width: 20%;
   }
 }
 

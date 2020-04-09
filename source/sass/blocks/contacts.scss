@@ -9,7 +9,7 @@
   padding: 90px 40px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/paper_airplane@2x.png"), url("../img/whiteBluetriangles.svg"), url("../img/blue-bg.png");
+    background-image: url("../img/paper_airplane@2x.png"), url("../img/whiteBluetriangles.svg"), url("../img/blue-bg.png");
     background-repeat: no-repeat;
     background-position: calc(44% - 295px) 160px, calc(40% - 365px) - 60px, 0 0;
     background-size: 511px 288px, auto, auto;
