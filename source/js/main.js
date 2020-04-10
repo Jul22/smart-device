@@ -105,9 +105,14 @@ var maskPhoneNumberInput = function (input) {
   return new window.IMask(input, maskOptions);
 };
 
+if (typeof NodeList.prototype.forEach !== 'function') {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
 phoneNumberInputs.forEach(function (input) {
   maskPhoneNumberInput(input);
 });
+
 
 if (contactsForm) {
   contactsForm.addEventListener('submit', function (event) {
